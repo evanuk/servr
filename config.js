@@ -1,5 +1,5 @@
 module.exports = {
   'port': process.env.PORT || 8080,
-  'database': 'mongodb://localhost:27017/servr',
+  'database': 'mongodb://evanuk:dbpassword@ds034878.mongolab.com:34878/evanuk',
   'secretSauce': 'nickimerz'
 };
