@@ -1,0 +1,45 @@
+<div class="page-header">
+  <h1 ng-if="booking.type =='create'">Create Booking</h1>
+  <h1 ng-if="booking.type == 'edit'">Edit Booking</h1>
+</div>
+
+<form class="form-horizontal" ng-submit="booking.saveBooking()">
+  <div class="form-group">
+    <label class="control-label col-sm-2">Name</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control col-sm-6" ng-model="booking.bookingData.name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">Size</label>
+    <div class="col-sm-1">
+      <input type="text" class="form-control col-sm-6" ng-model="booking.bookingData.size">
+    </div>
+  </div>
+  <div class ="form-group">
+    <label class="control-label col-sm-2">Notes</label>
+    <div class="col-sm-6">
+      <textarea rows="5" class="form-control col-sm-6" ng-model="booking.bookingData.notes"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">Cell #</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control col-sm-6" ng-model="booking.bookingData.cell">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-6">
+      <button type="submit" class="btn btn-submit btn-lg btn-block" ng-if="booking.type=='create'">Create Booking</button>
+      <button type="submit" class="btn btn-success btn-lg btn-block" ng-if="booking.type=='edit'">Update Booking</button>
+    </div>
+  </div>
+</form>
+
+<div class="row show-hide-message" ng-show="booking.message">
+  <div class="col-sm-6 col-sm-offset-2">
+    <div class="alert alert-info">
+      {{ booking.message }}
+    </div>
+  </div>
+</div>

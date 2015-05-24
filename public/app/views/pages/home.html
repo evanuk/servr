@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+	<h1>Welcome to Servr</h1>
+
+	<div ng-if="!main.loggedIn">
+		<p>Login to see and manage your bookings.</p>
+		<a href="/login" class="btn btn-primary">Login</a>
+	</div>
+
+	<div ng-if="main.loggedIn">
+		<p>Manage your bookings.</p>
+		<a href="/bookings" class="btn btn-primary">View Bookings</a>
+	</div>
+</div>
